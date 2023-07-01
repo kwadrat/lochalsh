@@ -1,5 +1,7 @@
 using namespace std;
 #include <iostream>
+#include <array>
+#include <bits/stdc++.h>
 
 class Diamond
 {
