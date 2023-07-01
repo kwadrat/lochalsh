@@ -17,6 +17,18 @@ class Diamond
         this->day = day;
         this->summary_text = summary_text;
     }
+    bool operator <(Diamond elem_b)
+    {
+        return year < elem_b.year;
+    }
+    void show_details(void)
+    {
+        cout << "year: " << year << " ";
+        cout << "month: " << month << " ";
+        cout << "day: " << day << " ";
+        cout << "summary_text: " << summary_text;
+        cout << endl;
+    }
 };
 
 int main(void)
