@@ -38,6 +38,15 @@ Diamond d_d(2002, 3, 13, "amphora");
 
 std::array<Diamond, 4> a1 = {d_a, d_b, d_c, d_d};
 
+void show_current_table(void)
+{
+    for(int i = 0; i < a1.size(); i++)
+    {
+        a1[i].show_details();
+    }
+    cout << endl;
+}
+
 int main(void)
 {
     cout << "Startowanie" << endl;
