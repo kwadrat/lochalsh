@@ -49,6 +49,9 @@ void show_current_table(void)
 
 int main(void)
 {
-    cout << "Startowanie" << endl;
+    std::sort(std::begin(a1), std::end(a1));
+    show_current_table();
+    std::sort(a1.begin(), a1.end());
+    show_current_table();
     return 0;
 }
