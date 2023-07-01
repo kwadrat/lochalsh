@@ -47,10 +47,19 @@ void show_current_table(void)
     cout << endl;
 }
 
+bool sort_by_txt(Diamond a, Diamond b)
+{
+    return a.summary_text <= b.summary_text;
+}
+
 int main(void)
 {
     std::sort(std::begin(a1), std::end(a1));
     show_current_table();
+
+    std::sort(a1.begin(), a1.end(), sort_by_txt);
+    show_current_table();
+
     std::sort(a1.begin(), a1.end());
     show_current_table();
     return 0;
