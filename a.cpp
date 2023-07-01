@@ -52,12 +52,20 @@ bool sort_by_txt(Diamond a, Diamond b)
     return a.summary_text <= b.summary_text;
 }
 
+bool sort_by_month(Diamond a, Diamond b)
+{
+    return a.month <= b.month;
+}
+
 int main(void)
 {
     std::sort(std::begin(a1), std::end(a1));
     show_current_table();
 
     std::sort(a1.begin(), a1.end(), sort_by_txt);
+    show_current_table();
+
+    std::sort(a1.begin(), a1.end(), sort_by_month);
     show_current_table();
 
     std::sort(a1.begin(), a1.end());
