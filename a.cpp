@@ -35,14 +35,6 @@ class Diamond
 };
 
 #if TEMPORARY_TOP_LEVEL_FUNCTIONS
-bool top_level_cmp(Diamond a, Diamond b)
-{
-    #if VERBOSE_DIAG
-        cout << "Hit!\n";
-    #endif // VERBOSE_DIAG
-    return true; /* true - good order, false - wrong order, swap elements to get good order */
-}
-
 bool sort_by_txt(Diamond a, Diamond b)
 {
     return a.summary_text <= b.summary_text;
