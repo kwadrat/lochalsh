@@ -34,6 +34,26 @@ class Diamond
     }
 };
 
+#if TEMPORARY_TOP_LEVEL_FUNCTIONS
+bool top_level_cmp(Diamond a, Diamond b)
+{
+    #if VERBOSE_DIAG
+        cout << "Hit!\n";
+    #endif // VERBOSE_DIAG
+    return true; /* true - good order, false - wrong order, replace elements */
+}
+
+bool sort_by_txt(Diamond a, Diamond b)
+{
+    return a.summary_text <= b.summary_text;
+}
+
+bool sort_by_month(Diamond a, Diamond b)
+{
+    return a.month <= b.month;
+}
+#endif // TEMPORARY_TOP_LEVEL_FUNCTIONS
+
 class SortBasic
 {
     static bool basic_compare(Diamond a, Diamond b)
@@ -80,31 +100,8 @@ class JewelBox
     }
 };
 
-#if TEMPORARY_TOP_LEVEL_FUNCTIONS
-bool top_level_cmp(Diamond a, Diamond b)
-{
-    #if VERBOSE_DIAG
-        cout << "Hit!\n";
-    #endif // VERBOSE_DIAG
-    return true; /* true - good order, false - wrong order, replace elements */
-}
-#else // TEMPORARY_TOP_LEVEL_FUNCTIONS
-#endif // TEMPORARY_TOP_LEVEL_FUNCTIONS
-
 SortBasic sort_basic;
 
-#if TEMPORARY_TOP_LEVEL_FUNCTIONS
-bool sort_by_txt(Diamond a, Diamond b)
-{
-    return a.summary_text <= b.summary_text;
-}
-
-bool sort_by_month(Diamond a, Diamond b)
-{
-    return a.month <= b.month;
-}
-#else // TEMPORARY_TOP_LEVEL_FUNCTIONS
-#endif // TEMPORARY_TOP_LEVEL_FUNCTIONS
 
 int main(void)
 {
