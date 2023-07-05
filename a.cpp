@@ -25,6 +25,14 @@ class Diamond
         return year < elem_b.year;
     }
 
+    void show_time(void)
+    {
+        cout << "year: " << year << " ";
+        cout << "month: " << month << " ";
+        cout << "day: " << day << " ";
+        cout << "summary_text: " << summary_text;
+    }
+
     void show_details(void)
     {
         cout << "year: " << year << " ";
