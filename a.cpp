@@ -19,10 +19,12 @@ class Diamond
         this->day = day;
         this->summary_text = summary_text;
     }
+
     bool operator <(Diamond elem_b)
     {
         return year < elem_b.year;
     }
+
     void show_details(void)
     {
         cout << "year: " << year << " ";
@@ -42,6 +44,7 @@ class SortBasic
         #endif // VERBOSE_DIAG
         return false;
     }
+
     public:
     virtual void perform_ordering(std::vector<Diamond> & a2)
     {
