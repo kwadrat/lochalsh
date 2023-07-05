@@ -65,6 +65,9 @@ bool sort_by_month(Diamond a, Diamond b)
 
 int main(void)
 {
+    std::sort(a1.begin(), a1.end(), top_level_cmp);
+    show_current_table("Experimental, by class");
+
     std::sort(std::begin(a1), std::end(a1));
     show_current_table("Just object");
 
