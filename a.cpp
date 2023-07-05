@@ -166,7 +166,8 @@ int main(void)
     jewel_box.perform_sorting();
     jewel_box.show_current_table("By text");
 
-    std::sort(jewel_box.a1.begin(), jewel_box.a1.end(), sort_by_month);
+    jewel_box.set_strategy( & sort_month);
+    jewel_box.perform_sorting();
     jewel_box.show_current_table("By month");
 
     std::sort(jewel_box.a1.begin(), jewel_box.a1.end());
