@@ -237,7 +237,14 @@ class JewelBox
         }
         else
         {
-            tmp_ptr = new Diamond(year, month, day, summary_text);
+            if(naming_strtgy->is_a_ended(summary_text))
+            {
+                tmp_ptr = new DmndAended(year, month, day, summary_text);
+            }
+            else
+            {
+                tmp_ptr = new Diamond(year, month, day, summary_text);
+            }
         }
         return tmp_ptr;
     }
