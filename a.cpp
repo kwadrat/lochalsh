@@ -158,8 +158,8 @@ class SortDay: public SortBasic
 class JewelBox
 {
     SortBasic * sort_ptr;
-    public:
     std::vector<Diamond *> a1;
+    public:
 
     void init_data(void)
     {
