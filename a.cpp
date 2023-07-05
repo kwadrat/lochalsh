@@ -33,6 +33,11 @@ class Diamond
     }
 };
 
+class JewelBox
+{
+    ;
+};
+
 Diamond d_a(1999, 2, 12, "zenith");
 Diamond d_b(2001, 4, 11, "glass");
 Diamond d_c(2000, 1, 14, "magma");
@@ -83,6 +88,7 @@ bool sort_by_month(Diamond a, Diamond b)
 
 int main(void)
 {
+    JewelBox jewel_box;
     std::sort(a1.begin(), a1.end(), top_level_cmp);
     show_current_table("Experimental, by class");
 
