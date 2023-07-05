@@ -1,6 +1,6 @@
 using namespace std;
 #include <iostream>
-#include <array>
+#include <vector>
 #include <bits/stdc++.h>
 
 #define TEMPORARY_TOP_LEVEL_FUNCTIONS 1
@@ -72,7 +72,7 @@ class JewelBox
 {
     SortBasic * sort_ptr;
     public:
-    std::array<Diamond, 4> a1 = {d_a, d_b, d_c, d_d};
+    std::vector<Diamond> a1 = {d_a, d_b, d_c, d_d};
 
     void init_data(void)
     {
