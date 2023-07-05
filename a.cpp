@@ -192,7 +192,14 @@ class JewelBox
 {
     SortBasic * sort_ptr;
     std::vector<Diamond *> a1;
+    StrategyBasic * naming_strtgy;
+
     public:
+
+    void decode_strategy(StrategyBasic * strtgy_ptr)
+    {
+        this->naming_strtgy = strtgy_ptr;
+    }
 
     void init_data(void)
     {
