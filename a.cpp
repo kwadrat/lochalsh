@@ -112,6 +112,21 @@ class DmndEven: public Diamond
     }
 };
 
+class DmndAended: public Diamond
+{
+    public:
+    DmndAended(int year, int month, int day, string summary_text): Diamond(year, month, day, summary_text)
+    {
+    }
+
+    void show_details(void)
+    {
+        show_time();
+        cout << " A-ended";
+        show_end();
+    }
+};
+
 class DmndTele: public Diamond, public MixinTele
 {
     public:
