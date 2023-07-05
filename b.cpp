@@ -48,7 +48,7 @@ class Diamond
         cout << endl;
     }
 
-    void show_details(void)
+    virtual void show_details(void)
     {
         show_time();
         show_end();
