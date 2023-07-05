@@ -180,6 +180,10 @@ int main(void)
     jewel_box.perform_sorting();
     jewel_box.show_current_table("By month");
 
+    jewel_box.set_strategy( & sort_day);
+    jewel_box.perform_sorting();
+    jewel_box.show_current_table("By day");
+
     std::sort(jewel_box.a1.begin(), jewel_box.a1.end());
     jewel_box.show_current_table("Just object");
     return 0;
