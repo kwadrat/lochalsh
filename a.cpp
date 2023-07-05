@@ -157,6 +157,7 @@ SortBasic sort_basic;
 SortObject sort_object;
 SortText sort_text;
 SortMonth sort_month;
+SortDay sort_day;
 
 
 int main(void)
