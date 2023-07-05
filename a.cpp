@@ -33,6 +33,11 @@ class Diamond
         cout << "summary_text: " << summary_text;
     }
 
+    void show_end(void)
+    {
+        cout << endl;
+    }
+
     void show_details(void)
     {
         cout << "year: " << year << " ";
