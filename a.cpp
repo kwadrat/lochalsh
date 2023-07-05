@@ -51,7 +51,7 @@ class Diamond
     void show_details(void)
     {
         show_time();
-        cout << endl;
+        show_end();
     }
 };
 
