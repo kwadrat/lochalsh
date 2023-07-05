@@ -167,6 +167,7 @@ class JewelBox
         a1.push_back(new Diamond(2001, 4, 11, "glass"));
         a1.push_back(new Diamond(2000, 1, 14, "magma"));
         a1.push_back(new Diamond(2002, 3, 13, "amphora"));
+        a1.push_back(new DmndTele(1998, 5, 10, "sand", "5551234"));
     }
 
     void set_strategy(SortBasic * sort_ptr)
