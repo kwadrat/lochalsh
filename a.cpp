@@ -49,6 +49,11 @@ class JewelBox
     {
         ;
     }
+
+    void set_strategy(SortBasic * sort_ptr)
+    {
+        this->sort_ptr = sort_ptr;
+    }
 };
 
 Diamond d_a(1999, 2, 12, "zenith");
@@ -95,6 +100,7 @@ int main(void)
 {
     JewelBox jewel_box;
     jewel_box.init_data();
+    jewel_box.set_strategy( & sort_basic);
     std::sort(a1.begin(), a1.end(), top_level_cmp);
     show_current_table("Experimental, by class");
 
