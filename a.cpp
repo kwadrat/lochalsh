@@ -50,10 +50,7 @@ class Diamond
 
     void show_details(void)
     {
-        cout << "year: " << year << " ";
-        cout << "month: " << month << " ";
-        cout << "day: " << day << " ";
-        cout << "summary_text: " << summary_text;
+        show_time();
         cout << endl;
     }
 };
