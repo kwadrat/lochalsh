@@ -38,8 +38,9 @@ Diamond d_d(2002, 3, 13, "amphora");
 
 std::array<Diamond, 4> a1 = {d_a, d_b, d_c, d_d};
 
-void show_current_table(void)
+void show_current_table(string one_txt)
 {
+    cout << one_txt << ":" << endl;
     for(int i = 0; i < a1.size(); i++)
     {
         a1[i].show_details();
@@ -60,15 +61,15 @@ bool sort_by_month(Diamond a, Diamond b)
 int main(void)
 {
     std::sort(std::begin(a1), std::end(a1));
-    show_current_table();
+    show_current_table("Just object");
 
     std::sort(a1.begin(), a1.end(), sort_by_txt);
-    show_current_table();
+    show_current_table("By text");
 
     std::sort(a1.begin(), a1.end(), sort_by_month);
-    show_current_table();
+    show_current_table("By month");
 
     std::sort(a1.begin(), a1.end());
-    show_current_table();
+    show_current_table("Just object");
     return 0;
 }
