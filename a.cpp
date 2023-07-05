@@ -35,11 +35,6 @@ class Diamond
 };
 
 #if TEMPORARY_TOP_LEVEL_FUNCTIONS
-bool sort_by_txt(Diamond a, Diamond b)
-{
-    return a.summary_text <= b.summary_text;
-}
-
 bool sort_by_month(Diamond a, Diamond b)
 {
     return a.month <= b.month;
