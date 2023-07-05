@@ -66,7 +66,7 @@ class SortBasic
     public:
     void perform_ordering(std::vector<Diamond> a2)
     {
-        std::sort(a2.begin(), a2.end(), top_level_cmp);
+        std::sort(a2.begin(), a2.end(), basic_compare);
     }
 };
 
