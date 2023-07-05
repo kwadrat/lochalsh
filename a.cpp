@@ -60,6 +60,11 @@ class SortBasic
     {
         return false;
     }
+    public:
+    void perform_ordering(std::vector<Diamond> a2)
+    {
+        std::sort(a2.begin(), a2.end(), top_level_cmp);
+    }
 };
 
 Diamond d_a(1999, 2, 12, "zenith");
@@ -99,7 +104,7 @@ class JewelBox
 
     void perform_sorting(void)
     {
-        std::sort(a1.begin(), a1.end(), top_level_cmp);
+        this->sort_ptr->perform_ordering(a1);
     }
 };
 
