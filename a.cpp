@@ -51,6 +51,8 @@ bool top_level_cmp(Diamond a, Diamond b)
     return false;
 }
 
+SortBasic sort_basic;
+
 void show_current_table(string one_txt)
 {
     cout << one_txt << ":" << endl;
