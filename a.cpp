@@ -5,6 +5,15 @@ using namespace std;
 
 #define VERBOSE_DIAG 0
 
+class StrategyBasic
+{
+    public:
+    virtual bool is_even(int day_of_month)
+    {
+        return false;
+    }
+};
+
 class MixinTele
 {
     string tele_phone;
