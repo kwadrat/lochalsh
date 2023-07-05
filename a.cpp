@@ -59,7 +59,7 @@ class SortBasic
     static bool basic_compare(Diamond a, Diamond b)
     {
         #if VERBOSE_DIAG
-            cout << "Hit!\n";
+            cout << "Basic!\n";
         #endif // VERBOSE_DIAG
         return false;
     }
