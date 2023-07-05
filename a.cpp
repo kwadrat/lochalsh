@@ -112,12 +112,6 @@ class SortDay: public SortBasic
     }
 };
 
-SortBasic sort_basic;
-SortObject sort_object;
-SortText sort_text;
-SortMonth sort_month;
-SortDay sort_day;
-
 Diamond d_a(1999, 2, 12, "zenith");
 Diamond d_b(2001, 4, 11, "glass");
 Diamond d_c(2000, 1, 14, "magma");
@@ -160,6 +154,12 @@ class JewelBox
 
 int main(void)
 {
+    SortBasic sort_basic;
+    SortObject sort_object;
+    SortText sort_text;
+    SortMonth sort_month;
+    SortDay sort_day;
+
     JewelBox jewel_box;
     jewel_box.init_data();
     jewel_box.set_strategy( & sort_basic);
