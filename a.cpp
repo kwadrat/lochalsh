@@ -3,7 +3,6 @@ using namespace std;
 #include <vector>
 #include <bits/stdc++.h>
 
-#define TEMPORARY_TOP_LEVEL_FUNCTIONS 1
 #define VERBOSE_DIAG 0
 
 class Diamond
@@ -33,13 +32,6 @@ class Diamond
         cout << endl;
     }
 };
-
-#if TEMPORARY_TOP_LEVEL_FUNCTIONS
-bool sort_by_month(Diamond a, Diamond b)
-{
-    return a.month <= b.month;
-}
-#endif // TEMPORARY_TOP_LEVEL_FUNCTIONS
 
 class SortBasic
 {
