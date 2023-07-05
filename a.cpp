@@ -47,12 +47,13 @@ Diamond d_b(2001, 4, 11, "glass");
 Diamond d_c(2000, 1, 14, "magma");
 Diamond d_d(2002, 3, 13, "amphora");
 
-std::array<Diamond, 4> a1 = {d_a, d_b, d_c, d_d};
 
 class JewelBox
 {
     SortBasic * sort_ptr;
     public:
+    std::array<Diamond, 4> a1 = {d_a, d_b, d_c, d_d};
+
     void init_data(void)
     {
         ;
@@ -111,19 +112,19 @@ int main(void)
     jewel_box.init_data();
     jewel_box.set_strategy( & sort_basic);
     jewel_box.perform_sorting();
-    std::sort(a1.begin(), a1.end(), top_level_cmp);
+    std::sort(jewel_box.a1.begin(), jewel_box.a1.end(), top_level_cmp);
     jewel_box.show_current_table("Experimental, by class");
 
-    std::sort(std::begin(a1), std::end(a1));
+    std::sort(std::begin(jewel_box.a1), std::end(jewel_box.a1));
     jewel_box.show_current_table("Just object");
 
-    std::sort(a1.begin(), a1.end(), sort_by_txt);
+    std::sort(jewel_box.a1.begin(), jewel_box.a1.end(), sort_by_txt);
     jewel_box.show_current_table("By text");
 
-    std::sort(a1.begin(), a1.end(), sort_by_month);
+    std::sort(jewel_box.a1.begin(), jewel_box.a1.end(), sort_by_month);
     jewel_box.show_current_table("By month");
 
-    std::sort(a1.begin(), a1.end());
+    std::sort(jewel_box.a1.begin(), jewel_box.a1.end());
     jewel_box.show_current_table("Just object");
     return 0;
 }
