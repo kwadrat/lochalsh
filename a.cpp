@@ -38,6 +38,14 @@ Diamond d_d(2002, 3, 13, "amphora");
 
 std::array<Diamond, 4> a1 = {d_a, d_b, d_c, d_d};
 
+class SortBasic
+{
+    static bool basic_compare(Diamond a, Diamond b)
+    {
+        return false;
+    }
+};
+
 bool top_level_cmp(Diamond a, Diamond b)
 {
     return false;
