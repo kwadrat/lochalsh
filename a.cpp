@@ -3,6 +3,8 @@ using namespace std;
 #include <array>
 #include <bits/stdc++.h>
 
+#define TEMPORARY_TOP_LEVEL_FUNCTIONS 1
+
 class Diamond
 {
     public:
@@ -46,10 +48,13 @@ class SortBasic
     }
 };
 
+#if TEMPORARY_TOP_LEVEL_FUNCTIONS
 bool top_level_cmp(Diamond a, Diamond b)
 {
     return false;
 }
+#else // TEMPORARY_TOP_LEVEL_FUNCTIONS
+#endif // TEMPORARY_TOP_LEVEL_FUNCTIONS
 
 SortBasic sort_basic;
 
@@ -63,6 +68,7 @@ void show_current_table(string one_txt)
     cout << endl;
 }
 
+#if TEMPORARY_TOP_LEVEL_FUNCTIONS
 bool sort_by_txt(Diamond a, Diamond b)
 {
     return a.summary_text <= b.summary_text;
@@ -72,6 +78,8 @@ bool sort_by_month(Diamond a, Diamond b)
 {
     return a.month <= b.month;
 }
+#else // TEMPORARY_TOP_LEVEL_FUNCTIONS
+#endif // TEMPORARY_TOP_LEVEL_FUNCTIONS
 
 int main(void)
 {
