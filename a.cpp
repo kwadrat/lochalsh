@@ -61,6 +61,16 @@ class JewelBox
     {
         this->sort_ptr = sort_ptr;
     }
+
+    void show_current_table(string one_txt)
+    {
+        cout << one_txt << ":" << endl;
+        for(int i = 0; i < a1.size(); i++)
+        {
+            a1[i].show_details();
+        }
+        cout << endl;
+    }
 };
 
 #if TEMPORARY_TOP_LEVEL_FUNCTIONS
@@ -72,16 +82,6 @@ bool top_level_cmp(Diamond a, Diamond b)
 #endif // TEMPORARY_TOP_LEVEL_FUNCTIONS
 
 SortBasic sort_basic;
-
-void show_current_table(string one_txt)
-{
-    cout << one_txt << ":" << endl;
-    for(int i = 0; i < a1.size(); i++)
-    {
-        a1[i].show_details();
-    }
-    cout << endl;
-}
 
 #if TEMPORARY_TOP_LEVEL_FUNCTIONS
 bool sort_by_txt(Diamond a, Diamond b)
@@ -102,18 +102,18 @@ int main(void)
     jewel_box.init_data();
     jewel_box.set_strategy( & sort_basic);
     std::sort(a1.begin(), a1.end(), top_level_cmp);
-    show_current_table("Experimental, by class");
+    jewel_box.show_current_table("Experimental, by class");
 
     std::sort(std::begin(a1), std::end(a1));
-    show_current_table("Just object");
+    jewel_box.show_current_table("Just object");
 
     std::sort(a1.begin(), a1.end(), sort_by_txt);
-    show_current_table("By text");
+    jewel_box.show_current_table("By text");
 
     std::sort(a1.begin(), a1.end(), sort_by_month);
-    show_current_table("By month");
+    jewel_box.show_current_table("By month");
 
     std::sort(a1.begin(), a1.end());
-    show_current_table("Just object");
+    jewel_box.show_current_table("Just object");
     return 0;
 }
