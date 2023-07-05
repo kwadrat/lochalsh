@@ -72,6 +72,11 @@ class JewelBox
         }
         cout << endl;
     }
+
+    void perform_sorting(void)
+    {
+        ;
+    }
 };
 
 #if TEMPORARY_TOP_LEVEL_FUNCTIONS
@@ -105,6 +110,7 @@ int main(void)
     JewelBox jewel_box;
     jewel_box.init_data();
     jewel_box.set_strategy( & sort_basic);
+    jewel_box.perform_sorting();
     std::sort(a1.begin(), a1.end(), top_level_cmp);
     jewel_box.show_current_table("Experimental, by class");
 
