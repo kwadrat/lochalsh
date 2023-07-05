@@ -96,7 +96,7 @@ class JewelBox
 
     void perform_sorting(void)
     {
-        ;
+        std::sort(a1.begin(), a1.end(), top_level_cmp);
     }
 };
 
@@ -109,7 +109,6 @@ int main(void)
     jewel_box.init_data();
     jewel_box.set_strategy( & sort_basic);
     jewel_box.perform_sorting();
-    std::sort(jewel_box.a1.begin(), jewel_box.a1.end(), top_level_cmp);
     jewel_box.show_current_table("Experimental, by class");
 
     std::sort(std::begin(jewel_box.a1), std::end(jewel_box.a1));
