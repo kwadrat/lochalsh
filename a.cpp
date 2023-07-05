@@ -64,7 +64,7 @@ class SortBasic
         return false;
     }
     public:
-    void perform_ordering(std::vector<Diamond> a2)
+    virtual void perform_ordering(std::vector<Diamond> a2)
     {
         std::sort(a2.begin(), a2.end(), basic_compare);
     }
