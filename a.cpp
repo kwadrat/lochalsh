@@ -43,6 +43,7 @@ class SortBasic
 
 class JewelBox
 {
+    SortBasic * sort_ptr;
     public:
     void init_data(void)
     {
