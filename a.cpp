@@ -14,6 +14,15 @@ class StrategyBasic
     }
 };
 
+class StrategyEven: public StrategyBasic
+{
+    public:
+    bool is_even(int day_of_month)
+    {
+        return ! (day_of_month % 2);
+    }
+};
+
 class MixinTele
 {
     string tele_phone;
