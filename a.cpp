@@ -150,6 +150,12 @@ class JewelBox
     {
         this->sort_ptr->perform_ordering(a1);
     }
+
+    void using_builtin_function(void)
+    {
+        perform_sorting();
+        show_current_table("Just object");
+    }
 };
 
 int main(void)
