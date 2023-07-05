@@ -134,6 +134,7 @@ class JewelBox
 
 SortBasic sort_basic;
 SortObject sort_object;
+SortText sort_text;
 
 
 int main(void)
@@ -148,7 +149,8 @@ int main(void)
     jewel_box.perform_sorting();
     jewel_box.show_current_table("Just object");
 
-    std::sort(jewel_box.a1.begin(), jewel_box.a1.end(), sort_by_txt);
+    jewel_box.set_strategy( & sort_text);
+    jewel_box.perform_sorting();
     jewel_box.show_current_table("By text");
 
     std::sort(jewel_box.a1.begin(), jewel_box.a1.end(), sort_by_month);
