@@ -43,7 +43,7 @@ class SortBasic
         return false;
     }
     public:
-    virtual void perform_ordering(std::vector<Diamond> a2)
+    virtual void perform_ordering(std::vector<Diamond> & a2)
     {
         std::sort(a2.begin(), a2.end(), basic_compare);
     }
@@ -52,7 +52,7 @@ class SortBasic
 class SortObject: public SortBasic
 {
     public:
-    void perform_ordering(std::vector<Diamond> a3)
+    void perform_ordering(std::vector<Diamond> & a3)
     {
         #if VERBOSE_DIAG
             cout << "Compare objects - single message!\n";
@@ -72,7 +72,7 @@ class SortText: public SortBasic
     }
 
     public:
-    void perform_ordering(std::vector<Diamond> a4)
+    void perform_ordering(std::vector<Diamond> & a4)
     {
         std::sort(a4.begin(), a4.end(), sort_by_txt);
     }
@@ -89,7 +89,7 @@ class SortMonth: public SortBasic
     }
 
     public:
-    void perform_ordering(std::vector<Diamond> a5)
+    void perform_ordering(std::vector<Diamond> & a5)
     {
         std::sort(a5.begin(), a5.end(), sort_by_month);
     }
