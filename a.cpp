@@ -72,11 +72,14 @@ class JewelBox
 {
     SortBasic * sort_ptr;
     public:
-    std::vector<Diamond> a1 = {d_a, d_b, d_c, d_d};
+    std::vector<Diamond> a1;
 
     void init_data(void)
     {
-        ;
+        a1.push_back(d_a);
+        a1.push_back(d_b);
+        a1.push_back(d_c);
+        a1.push_back(d_d);
     }
 
     void set_strategy(SortBasic * sort_ptr)
