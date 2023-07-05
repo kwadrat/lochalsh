@@ -194,6 +194,20 @@ class JewelBox
     std::vector<Diamond *> a1;
     StrategyBasic * naming_strtgy;
 
+    Diamond * create_dmnd(int year, int month, int day, string summary_text)
+    {
+        Diamond * tmp_ptr;
+        if(naming_strtgy->is_even(day))
+        {
+            tmp_ptr = new DmndEven(year, month, day, summary_text);
+        }
+        else
+        {
+            tmp_ptr = new Diamond(year, month, day, summary_text);
+        }
+        return tmp_ptr;
+    }
+
     public:
 
     void decode_strategy(StrategyBasic * strtgy_ptr)
