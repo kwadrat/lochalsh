@@ -77,7 +77,7 @@ class DmndTele: public Diamond, public MixinTele
 
 class SortBasic
 {
-    static bool basic_compare(Diamond a, Diamond b)
+    static bool basic_compare(Diamond * a, Diamond * b)
     {
         #if VERBOSE_DIAG
             cout << "Basic!\n";
@@ -86,7 +86,7 @@ class SortBasic
     }
 
     public:
-    virtual void perform_ordering(std::vector<Diamond> & a2)
+    virtual void perform_ordering(std::vector<Diamond *> & a2)
     {
         std::sort(a2.begin(), a2.end(), basic_compare);
     }
@@ -95,7 +95,7 @@ class SortBasic
 class SortObject: public SortBasic
 {
     public:
-    void perform_ordering(std::vector<Diamond> & a3)
+    void perform_ordering(std::vector<Diamond *> & a3)
     {
         #if VERBOSE_DIAG
             cout << "Compare objects - single message!\n";
@@ -106,16 +106,16 @@ class SortObject: public SortBasic
 
 class SortText: public SortBasic
 {
-    static bool sort_by_txt(Diamond a, Diamond b)
+    static bool sort_by_txt(Diamond * a, Diamond * b)
     {
         #if VERBOSE_DIAG
             cout << "Text!\n";
         #endif // VERBOSE_DIAG
-        return a.summary_text <= b.summary_text;
+        return a->summary_text <= b->summary_text;
     }
 
     public:
-    void perform_ordering(std::vector<Diamond> & a4)
+    void perform_ordering(std::vector<Diamond *> & a4)
     {
         std::sort(a4.begin(), a4.end(), sort_by_txt);
     }
@@ -123,16 +123,16 @@ class SortText: public SortBasic
 
 class SortMonth: public SortBasic
 {
-    static bool sort_by_month(Diamond a, Diamond b)
+    static bool sort_by_month(Diamond * a, Diamond * b)
     {
         #if VERBOSE_DIAG
             cout << "Month!\n";
         #endif // VERBOSE_DIAG
-        return a.month <= b.month;
+        return a->month <= b->month;
     }
 
     public:
-    void perform_ordering(std::vector<Diamond> & a5)
+    void perform_ordering(std::vector<Diamond *> & a5)
     {
         std::sort(a5.begin(), a5.end(), sort_by_month);
     }
@@ -140,16 +140,16 @@ class SortMonth: public SortBasic
 
 class SortDay: public SortBasic
 {
-    static bool sort_by_day(Diamond a, Diamond b)
+    static bool sort_by_day(Diamond * a, Diamond * b)
     {
         #if VERBOSE_DIAG
             cout << "Day!\n";
         #endif // VERBOSE_DIAG
-        return a.day <= b.day;
+        return a->day <= b->day;
     }
 
     public:
-    void perform_ordering(std::vector<Diamond> & a6)
+    void perform_ordering(std::vector<Diamond *> & a6)
     {
         std::sort(a6.begin(), a6.end(), sort_by_day);
     }
@@ -159,14 +159,14 @@ class JewelBox
 {
     SortBasic * sort_ptr;
     public:
-    std::vector<Diamond> a1;
+    std::vector<Diamond *> a1;
 
     void init_data(void)
     {
-        a1.push_back(Diamond(1999, 2, 12, "zenith"));
-        a1.push_back(Diamond(2001, 4, 11, "glass"));
-        a1.push_back(Diamond(2000, 1, 14, "magma"));
-        a1.push_back(Diamond(2002, 3, 13, "amphora"));
+        a1.push_back(new Diamond(1999, 2, 12, "zenith"));
+        a1.push_back(new Diamond(2001, 4, 11, "glass"));
+        a1.push_back(new Diamond(2000, 1, 14, "magma"));
+        a1.push_back(new Diamond(2002, 3, 13, "amphora"));
     }
 
     void set_strategy(SortBasic * sort_ptr)
@@ -179,7 +179,7 @@ class JewelBox
         cout << one_txt << ":" << endl;
         for(int i = 0; i < a1.size(); i++)
         {
-            a1[i].show_details();
+            a1[i]->show_details();
         }
         cout << endl;
     }
