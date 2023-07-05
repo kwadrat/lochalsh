@@ -217,10 +217,10 @@ class JewelBox
 
     void init_data(void)
     {
-        a1.push_back(new Diamond(1999, 2, 12, "zenith"));
-        a1.push_back(new Diamond(2001, 4, 11, "glass"));
-        a1.push_back(new Diamond(2000, 1, 14, "magma"));
-        a1.push_back(new Diamond(2002, 3, 13, "amphora"));
+        a1.push_back(create_dmnd(1999, 2, 12, "zenith"));
+        a1.push_back(create_dmnd(2001, 4, 11, "glass"));
+        a1.push_back(create_dmnd(2000, 1, 14, "magma"));
+        a1.push_back(create_dmnd(2002, 3, 13, "amphora"));
         a1.push_back(new DmndTele(1998, 5, 10, "sand", "5551234"));
     }
 
