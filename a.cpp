@@ -5,6 +5,16 @@ using namespace std;
 
 #define VERBOSE_DIAG 0
 
+class MixinTele
+{
+    public:
+    string tele_phone;
+    MixinTele(string tele_text)
+    {
+        this->tele_phone = tele_text;
+    }
+};
+
 class Diamond
 {
     public:
