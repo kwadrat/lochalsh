@@ -86,6 +86,23 @@ class SortText: public SortBasic
     }
 };
 
+class SortMonth: public SortBasic
+{
+    static bool sort_by_month(Diamond a, Diamond b)
+    {
+        #if VERBOSE_DIAG
+            cout << "Month!\n";
+        #endif // VERBOSE_DIAG
+        return a.month <= b.month;
+    }
+
+    public:
+    void perform_ordering(std::vector<Diamond> a5)
+    {
+        std::sort(a5.begin(), a5.end(), sort_by_month);
+    }
+};
+
 Diamond d_a(1999, 2, 12, "zenith");
 Diamond d_b(2001, 4, 11, "glass");
 Diamond d_c(2000, 1, 14, "magma");
