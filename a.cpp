@@ -258,8 +258,10 @@ int main(void)
     SortText sort_text;
     SortMonth sort_month;
     SortDay sort_day;
+    StrategyEven strategy_even;
 
     JewelBox jewel_box;
+    jewel_box.decode_strategy( & strategy_even);
     jewel_box.init_data();
     jewel_box.set_strategy( & sort_basic);
     jewel_box.perform_sorting();
