@@ -13,6 +13,11 @@ class MixinTele
     {
         this->tele_phone = tele_text;
     }
+
+    void show_digits_of_phone(void)
+    {
+        cout << " phone: " << tele_phone;
+    }
 };
 
 class Diamond
