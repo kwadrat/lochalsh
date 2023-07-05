@@ -116,6 +116,7 @@ class JewelBox
 };
 
 SortBasic sort_basic;
+SortObject sort_object;
 
 
 int main(void)
@@ -126,7 +127,8 @@ int main(void)
     jewel_box.perform_sorting();
     jewel_box.show_current_table("Experimental, by class");
 
-    std::sort(std::begin(jewel_box.a1), std::end(jewel_box.a1));
+    jewel_box.set_strategy( & sort_object);
+    jewel_box.perform_sorting();
     jewel_box.show_current_table("Just object");
 
     std::sort(jewel_box.a1.begin(), jewel_box.a1.end(), sort_by_txt);
