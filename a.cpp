@@ -12,6 +12,10 @@ class StrategyBasic
     {
         return false;
     }
+    virtual bool is_a_ended(string text_a)
+    {
+        return false;
+    }
 };
 
 class StrategyEven: public StrategyBasic
