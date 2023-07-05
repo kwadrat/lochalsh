@@ -62,6 +62,18 @@ class SortBasic
     }
 };
 
+class SortObject: public SortBasic
+{
+    public:
+    void perform_ordering(std::vector<Diamond> a3)
+    {
+        #if VERBOSE_DIAG
+            cout << "Compare objects - single message!\n";
+        #endif // VERBOSE_DIAG
+        std::sort(a3.begin(), a3.end());
+    }
+};
+
 Diamond d_a(1999, 2, 12, "zenith");
 Diamond d_b(2001, 4, 11, "glass");
 Diamond d_c(2000, 1, 14, "magma");
