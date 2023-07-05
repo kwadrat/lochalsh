@@ -147,6 +147,7 @@ class JewelBox
 SortBasic sort_basic;
 SortObject sort_object;
 SortText sort_text;
+SortMonth sort_month;
 
 
 int main(void)
