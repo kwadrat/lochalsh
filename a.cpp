@@ -4,6 +4,7 @@ using namespace std;
 #include <bits/stdc++.h>
 
 #define TEMPORARY_TOP_LEVEL_FUNCTIONS 1
+#define VERBOSE_DIAG 0
 
 class Diamond
 {
@@ -76,6 +77,9 @@ class JewelBox
 #if TEMPORARY_TOP_LEVEL_FUNCTIONS
 bool top_level_cmp(Diamond a, Diamond b)
 {
+    #if VERBOSE_DIAG
+        cout << "Hit!\n";
+    #endif // VERBOSE_DIAG
     return false;
 }
 #else // TEMPORARY_TOP_LEVEL_FUNCTIONS
