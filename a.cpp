@@ -38,6 +38,11 @@ Diamond d_d(2002, 3, 13, "amphora");
 
 std::array<Diamond, 4> a1 = {d_a, d_b, d_c, d_d};
 
+bool top_level_cmp(Diamond a, Diamond b)
+{
+    return false;
+}
+
 void show_current_table(string one_txt)
 {
     cout << one_txt << ":" << endl;
