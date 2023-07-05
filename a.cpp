@@ -300,9 +300,10 @@ int main(void)
     SortMonth sort_month;
     SortDay sort_day;
     StrategyEven strategy_even;
+    StrategyAfinished strategy_afinished;
 
     JewelBox jewel_box;
-    jewel_box.decode_strategy( & strategy_even);
+    jewel_box.decode_strategy( & strategy_afinished);
     jewel_box.init_data();
     jewel_box.set_strategy( & sort_basic);
     jewel_box.perform_sorting();
