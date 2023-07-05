@@ -60,6 +60,21 @@ class Diamond
     }
 };
 
+class DmndTele: public Diamond, public MixinTele
+{
+    public:
+    DmndTele(int year, int month, int day, string summary_text, string phone_nr): Diamond(year, month, day, summary_text), MixinTele(phone_nr)
+    {
+        ;
+    }
+    void show_details(void)
+    {
+        show_time();
+        show_digits_of_phone();
+        show_end();
+    }
+};
+
 class SortBasic
 {
     static bool basic_compare(Diamond * a, Diamond * b)
