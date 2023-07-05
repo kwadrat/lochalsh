@@ -33,6 +33,14 @@ class Diamond
     }
 };
 
+class SortBasic
+{
+    static bool basic_compare(Diamond a, Diamond b)
+    {
+        return false;
+    }
+};
+
 class JewelBox
 {
     public:
@@ -48,14 +56,6 @@ Diamond d_c(2000, 1, 14, "magma");
 Diamond d_d(2002, 3, 13, "amphora");
 
 std::array<Diamond, 4> a1 = {d_a, d_b, d_c, d_d};
-
-class SortBasic
-{
-    static bool basic_compare(Diamond a, Diamond b)
-    {
-        return false;
-    }
-};
 
 #if TEMPORARY_TOP_LEVEL_FUNCTIONS
 bool top_level_cmp(Diamond a, Diamond b)
