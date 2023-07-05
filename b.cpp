@@ -7,8 +7,8 @@ using namespace std;
 
 class MixinTele
 {
-    public:
     string tele_phone;
+    public:
     MixinTele(string tele_text)
     {
         this->tele_phone = tele_text;
