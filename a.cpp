@@ -112,11 +112,6 @@ class SortDay: public SortBasic
     }
 };
 
-Diamond d_a(1999, 2, 12, "zenith");
-Diamond d_b(2001, 4, 11, "glass");
-Diamond d_c(2000, 1, 14, "magma");
-Diamond d_d(2002, 3, 13, "amphora");
-
 class JewelBox
 {
     SortBasic * sort_ptr;
@@ -125,10 +120,10 @@ class JewelBox
 
     void init_data(void)
     {
-        a1.push_back(d_a);
-        a1.push_back(d_b);
-        a1.push_back(d_c);
-        a1.push_back(d_d);
+        a1.push_back(Diamond(1999, 2, 12, "zenith"));
+        a1.push_back(Diamond(2001, 4, 11, "glass"));
+        a1.push_back(Diamond(2000, 1, 14, "magma"));
+        a1.push_back(Diamond(2002, 3, 13, "amphora"));
     }
 
     void set_strategy(SortBasic * sort_ptr)
