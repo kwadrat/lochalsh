@@ -27,6 +27,21 @@ class StrategyEven: public StrategyBasic
     }
 };
 
+class StrategyAfinished: public StrategyBasic
+{
+    public:
+    bool is_a_ended(string text_a)
+    {
+        size_t a = text_a.length();
+        bool result = false;
+        if(a >= 1 && text_a[a - 1] == 'a')
+        {
+            result = true;
+        }
+        return result;
+    }
+};
+
 class MixinTele
 {
     string tele_phone;
