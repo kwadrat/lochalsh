@@ -72,35 +72,6 @@ class SortBasic
     }
 };
 
-class SortObject: public SortBasic
-{
-    public:
-    void perform_ordering(std::vector<Diamond> & a3)
-    {
-        #if VERBOSE_DIAG
-            cout << "Compare objects - single message!\n";
-        #endif // VERBOSE_DIAG
-        std::sort(a3.begin(), a3.end());
-    }
-};
-
-class SortText: public SortBasic
-{
-    static bool sort_by_txt(Diamond a, Diamond b)
-    {
-        #if VERBOSE_DIAG
-            cout << "Text!\n";
-        #endif // VERBOSE_DIAG
-        return a.summary_text <= b.summary_text;
-    }
-
-    public:
-    void perform_ordering(std::vector<Diamond> & a4)
-    {
-        std::sort(a4.begin(), a4.end(), sort_by_txt);
-    }
-};
-
 class SortMonth: public SortBasic
 {
     static bool sort_by_month(Diamond a, Diamond b)
@@ -179,10 +150,7 @@ class JewelBox
 int main(void)
 {
     SortBasic sort_basic;
-    SortObject sort_object;
-    SortText sort_text;
     SortMonth sort_month;
-    SortDay sort_day;
 
     JewelBox jewel_box;
     jewel_box.init_data();
@@ -190,22 +158,9 @@ int main(void)
     jewel_box.perform_sorting();
     jewel_box.show_current_table("Experimental, by class");
 
-    jewel_box.set_strategy( & sort_object);
-    jewel_box.using_builtin_function();
-
-    jewel_box.set_strategy( & sort_text);
-    jewel_box.perform_sorting();
-    jewel_box.show_current_table("By text");
-
     jewel_box.set_strategy( & sort_month);
     jewel_box.perform_sorting();
     jewel_box.show_current_table("By month");
 
-    jewel_box.set_strategy( & sort_day);
-    jewel_box.perform_sorting();
-    jewel_box.show_current_table("By day");
-
-    jewel_box.set_strategy( & sort_object);
-    jewel_box.using_builtin_function();
     return 0;
 }
