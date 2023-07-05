@@ -62,7 +62,7 @@ class SortBasic
         #if VERBOSE_DIAG
             cout << "Basic!\n";
         #endif // VERBOSE_DIAG
-        return false;
+        return true;
     }
 
     public:
