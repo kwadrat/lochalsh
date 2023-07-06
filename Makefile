@@ -1,10 +1,14 @@
 .PHONY: clean all
 
-all: a b
+all: a b c d
 
 a: a.cpp
 
 b: b.cpp
 
+c: c.cpp
+
+d: d.cpp
+
 clean:
-	rm a b
+	rm a b c d
